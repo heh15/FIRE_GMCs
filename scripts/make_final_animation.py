@@ -32,7 +32,10 @@ fitsDir = Dir + orbit + '/'
 
 incl = 'v0'
 ids = np.arange(520,712,2)
-ids = np.arange(250,412,2)
+ids = np.arange(278,412,2)
+
+t_cols = [2.616, 2.831]
+t_cols = [1.41, 1.53]
 
 frames = len(ids)
 print(frames)
@@ -402,8 +405,8 @@ def animate(i):
     ax0.plot(Times, SFRs)
     ax0.set_xlabel('Time (Gyr)', fontsize=10)
     ax0.set_ylabel('SFR (M$_{\odot}$ yr$^{-1}$', fontsize=10)
-    ax0.axvline(2.616, linestyle='dashed', color='black')
-    ax0.axvline(2.831, linestyle='dashed', color='black')
+    ax0.axvline(t_cols[0], linestyle='dashed', color='black')
+    ax0.axvline(t_cols[1], linestyle='dashed', color='black')
     ax0.axvline(Times[idNo], linestyle='solid', color='black')
 
     # plot the scatter plot
